@@ -2,6 +2,7 @@
 const todoInput = document.querySelector('.todo-input');
 const todoBtn = document.querySelector('.todo-btn');
 const todoList = document.querySelector('.todo-list');
+const hwtext = document.querySelector('h2');
 
 // Event Listeners
 todoBtn.addEventListener('click', addTodo);
@@ -13,6 +14,7 @@ todoList.addEventListener('click', deleteCheck);
 function addTodo (event) {
     // This below prevents the page from reloading when clicked
     event.preventDefault();
+    if(todoInput.value != ""){
 //Todo DIV
 const todoDiv = document.createElement('div');
 todoDiv.classList.add('todo');
@@ -40,6 +42,11 @@ todoDiv.appendChild(trashButton);
 todoList.appendChild(todoDiv);
 // Clear todo input value
 todoInput.value = "";
+document.querySelector('h2').innerHTML = "😊😊😊😊😊😊😊";
+} else {
+   document.querySelector('h2').innerText = "Can't add an empty todo";
+   document.querySelector('h2').style.color = "red";
+}
 }
 
 function deleteCheck(e) {
