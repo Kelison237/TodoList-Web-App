@@ -28,13 +28,13 @@ todoDiv.appendChild(newTodo);
 saveLocalTodos(todoInput.value);
 //Check mark button
 const completedBtn = document.createElement('button');
-completedBtn.innerHTML = '<li class="fas fa-check"></i>';
+completedBtn.innerHTML = '<span>✔️</span>';
 completedBtn.classList.add("complete-btn");
 todoDiv.appendChild(completedBtn);
 
 //Delete button
 const trashButton = document.createElement('button');
-trashButton.innerHTML = '<li class="fas fa-trash"></i>';
+trashButton.innerHTML = '<span>🗑️</span>';
 trashButton.classList.add("trash-btn");
 todoDiv.appendChild(trashButton);
 
